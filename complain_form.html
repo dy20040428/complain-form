@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>客訴回報表單</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f8f8f8;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #c0392b;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a93226;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>顧客意見回饋表單</h2>
+    <form action="https://formsubmit.co/osctndn062361777@gmail.com" method="POST">
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">電話</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="email">電子郵件</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="type">投訴類型</label>
+      <select id="type" name="type">
+        <option value="food">餐點問題</option>
+        <option value="service">服務態度</option>
+        <option value="environment">用餐環境</option>
+        <option value="other">其他</option>
+      </select>
+
+      <label for="message">內容</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="hidden" name="_subject" value="新客訴回報">
+      <input type="hidden" name="_next" value="https://你的網站.com/thankyou.html">
+
+      <button type="submit">送出回饋</button>
+    </form>
+  </div>
+</body>
+</html>
